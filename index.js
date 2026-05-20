@@ -11,7 +11,7 @@ const AUTH_HEADERS = {
 
 app.use(cors());
 
-app.get("/api/Levapan/pdv", async (req, res) => {
+app.get("/api/natural/pdv", async (req, res) => {
     try {
         // Determinar qué API usar según el parámetro 'tipo'
         const tipo = req.query.tipo;
