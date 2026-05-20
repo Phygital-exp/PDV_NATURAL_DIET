@@ -5,7 +5,7 @@ let filteredData = [];
 let currentChannel = '';
 
 // URL base de la API
-const API_BASE_URL = 'https://levapan-production.up.railway.app/api/Levapan/pdv';
+const API_BASE_URL = 'https://levapan-production.up.railway.app/api/natural/pdv';
 
 // Cargar datos de la API según el canal seleccionado
 async function loadData() {
