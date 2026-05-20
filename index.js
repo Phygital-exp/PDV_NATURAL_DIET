@@ -13,16 +13,7 @@ app.use(cors());
 
 app.get("/api/natural/pdv", async (req, res) => {
     try {
-        // Determinar qué API usar según el parámetro 'tipo'
-        const tipo = req.query.tipo;
-        let apiUrl;
-        
-        if (tipo === 'independiente') {
-            apiUrl = "https://botai.smartdataautomation.com/api_backend_ai/dinamic-db/report/119/Levapan_PDVs_independientes";
-        } else {
-            // Por defecto, usar la API de modernos (o todos)
-            apiUrl = "https://botai.smartdataautomation.com/api_backend_ai/dinamic-db/report/119/Levapan_PDVs";
-        }
+        const apiUrl = "https://botai.smartdataautomation.com/api_backend_ai/dinamic-db/report/119/pdv_natural_diet";
         
         console.log(`Consultando API: ${apiUrl}`);
         
@@ -30,8 +21,8 @@ app.get("/api/natural/pdv", async (req, res) => {
         const data = await response.json();
         res.json(data);
     } catch (err) {
-        console.error("Error en el proxy levapan PDV:", err);
-        res.status(500).json({ error: "Error al obtener datos de levapan PDV" });
+        console.error("Error en el proxy natural diet PDV:", err);
+        res.status(500).json({ error: "Error al obtener datos de natural diet PDV" });
     }
 });
 
